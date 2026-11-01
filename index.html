@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>在线客服</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* 顶部白色标题栏，层级最高，盖住下方twtchat文字 */
+        .header-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99999;
+            width: 100%;
+            height: 56px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #222222;
+        }
+        /* iframe区域往下挤，避开我们的标题栏 */
+        .chat-wrap {
+            width: 100%;
+            height: 100vh;
+            padding-top: 56px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 外层标题：在线客服 -->
+    <div class="header-bar">在线客服</div>
+    <div class="chat-wrap">
+        <iframe src="https://page1.visitor-chat.com/direct/bf286ead71113ab1c66aab3eb3e6e92d_08kcb6e67f6j" allow="*"></iframe>
+    </div>
+</body>
+</html>
